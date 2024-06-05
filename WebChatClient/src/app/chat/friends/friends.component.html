@@ -1,0 +1,59 @@
+
+<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">
+				<div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card">
+					<div class="card-header">
+						<div class="input-group">
+							<input type="text" placeholder="Search..." name="" class="form-control search">
+								<span class="input-group-text search_btn mr-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg></span>
+						</div>
+					</div>
+
+          <div class="card-body contacts_body">
+          <ul class="contacts"  *ngFor="let friend of friends">
+          <li >
+            <a class="nav-link active d-flex bd-highlight" aria-current="page" (click)="getChat(friend.friendShipId)">
+                <div class="img_cont">
+                    <img src="{{friend.imgUrl}}" class="rounded-circle user_img">
+                </div>
+                <div class="user_info">
+                    <span>{{friend.friendName}}</span>
+                </div>
+            </a>
+         </li>
+         </ul>
+     </div>
+     </div>
+     </div>
+</div>
+     
+	
+
+
+
+
+
+
+
+<!-- List group -->
+<!--<div class="list-group" id="myList" role="tablist">
+    <div class="container  col-5" *ngFor="let friend of friends">
+
+    <a class="list-group-item list-group-item-action friends mb-2" data-toggle="list" role="tab">
+            <div class="image col-2 ">
+                <img src="assets\Images\images.png " class="img-fluid" alt="">
+            </div>
+            <h4 class="col-9">{{friend.friendName}}</h4>
+    </a>
+</div>
+
+  </div>
+  
+  <div class="tab-content">
+    <div class="tab-pane active" id="home" role="tabpanel">...</div>
+    <div class="tab-pane" id="profile" role="tabpanel">...</div>
+    <div class="tab-pane" id="messages" role="tabpanel">...</div>
+    <div class="tab-pane" id="settings" role="tabpanel">...</div>
+  </div>-->

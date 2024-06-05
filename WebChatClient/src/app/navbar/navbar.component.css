@@ -1,0 +1,44 @@
+.profileLink{
+    background-color: rgba(102, 113, 121, 0.208);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 5px 10px;
+    color: white;
+}
+.nav-item{
+    font-size: large;
+}
+.user_img{
+    height: 50px;
+    width: 50px;
+    border:1.1px solid #f5f6fa;
+
+}
+.user_img_msg{
+    height: 40px;
+    width: 40px;
+    border:1.5px solid #f5f6fa;
+
+}
+.img_cont{
+    position: relative;
+    height: 70px;
+    width: 70px;
+}
+.img_cont_msg{
+    height: 40px;
+    width: 40px;
+}
+.online_icon{
+position: absolute;
+height: 15px;
+width:15px;
+background-color: #4cd137;
+border-radius: 50%;
+bottom: 0.2em;
+right: 0.4em;
+border:1.5px solid white;
+}
+.offline{
+background-color: #c23616 ;
+}

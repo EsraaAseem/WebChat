@@ -1,0 +1,35 @@
+
+
+
+<form (ngSubmit)="registerUser()" #registerForm="ngForm"  >
+  <div class="form m-5">
+    <div class="divContent col-5">
+      <label for="userName" class="label col-3 text-center">Username:</label>
+      <input class="inputcontent col-8" type="text" id="userName" name="userName" [(ngModel)]="registerData.userName" required>
+    </div>
+    
+    <div class="divContent col-5">
+      <label for="password" class="label col-3 text-center">Password:</label>
+      <input class="inputcontent col-8" type="password" id="password" name="password" [(ngModel)]="registerData.password" required>
+    </div>
+  
+    <div class="divContent col-5">
+      <label for="name"class="label col-3 text-center">Name:</label>
+      <input class="inputcontent col-8" type="text" id="name" name="name" [(ngModel)]="registerData.name" required>
+    </div>
+  
+    <div class="divContent col-5">
+      <label class="label col-3 text-center" for="phoneNumber">Phone:</label>
+      <input class="inputcontent col-8" type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="registerData.phoneNumber" required>
+    </div>
+  
+    <div class="divContent col-7 mt-3">
+      <label class="label col-3 text-center" for="userImg">User Image:</label>
+      <input class="inputcontent col-9" type="file" id="userImg" name="userImg" (change)="onFileSelected($event)" required>
+    </div>
+  </div>
+  <div class="register">
+    <button type="submit" [disabled]="!registerForm.valid" class="btn btn-success col-3 ">Register</button>
+  </div>
+  </form>
+  

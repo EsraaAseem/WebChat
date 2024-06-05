@@ -1,0 +1,112 @@
+<div class="container-fluid h-100">
+    <div class="row justify-content-center h-100">
+    
+        <div class="chat">
+            <div class="card">
+
+                <div class="card-header msg_head">
+                    <div class="d-flex bd-highlight">
+                        <div class="img_cont">
+                            <img [src]="friendImgUrl" class="rounded-circle user_img">
+
+                            <span></span><!--class="online_icon"   {{friendmessages.friendName}}  {{friendmessages.friendImgUrl}}-->
+                        </div>
+                        <div class="user_info">
+                            <span>Chat with {{friendName}}</span>
+                            <p>{{messages.length}} Messages</p>
+                        </div>
+                        <div class="video_cam">
+                            <span><i class="fas fa-video"></i></span>
+                            <span><i class="fas fa-phone"></i></span>
+                        </div>
+                    </div>
+                    <div class="nav-item action_menu" ngbDropdown >
+                        <span ngbDropdownToggle  id="navbarDropdown"   aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                              </svg>
+                        </span>
+                        <ul ngbDropdownMenu="navbarDropdown" class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <li><i class="fas fa-user-circle"></i> View profile</li>
+                            <li><i class="fas fa-users"></i> Add to close</li>
+                            <li><i class="fas fa-plus"></i> Add to group</li>
+                            <li><i class="fas fa-ban"></i> Block</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body msg_card_body" >
+                    <div *ngFor="let msg of messages" class="mb-4 messageItem">
+                      <div *ngIf="msg.senderId!=currentUser.id">
+                      <div class="d-flex justify-content-start " *ngIf="msg.isDeleteByReciver==0&&(msg.isDeleteBySender==0||msg.isDeleteBySender==1)">
+                        <div class="delete">
+
+
+                            <div class="nav-item .reciverdown" ngbDropdown >
+                                <span ngbDropdownToggle  id="navbarDropdown"   aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                        <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                      </svg>
+                                </span>
+                                <ul ngbDropdownMenu="navbarDropdown" class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                    <section >
+                                        <a class="dropdown-item mouseCursor" (click)="DeleteMessage(msg.messageId,3)">For Me</a>
+                                      </section>
+                                </ul>
+                            </div>
+
+                          
+                         </div>
+                        <div class="img_cont_msg">
+                            <img [src]="friendImgUrl" class="rounded-circle user_img_msg">
+                        </div>
+                        <div class="msg_cotainer" *ngIf="!(msg.isDeleted==true && msg.deleteType=='forEveryOne')">
+                            {{msg.content}}
+                            <span class="msg_time">{{msg.messageTime| date:'shortTime'}}</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div *ngIf="msg.senderId==currentUser.id">
+                    <div class="d-flex justify-content-end " *ngIf="msg.isDeleteBySender==0">
+                            <section >
+                                <div class="nav-item .senderdown" ngbDropdown >
+                                    <span ngbDropdownToggle  id="navbarDropdown"   aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                          </svg>
+                                    </span>
+                                    <ul ngbDropdownMenu="navbarDropdown" class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item mouseCursor" (click)="DeleteMessage(msg.messageId,1)">For Me</a>
+                                        <a class="dropdown-item mouseCursor" (click)="DeleteMessage(msg.messageId,2)">For everyOne</a>
+                                    </ul>
+                                </div>
+                               
+                            </section>
+                         <div class="msg_cotainer_send">
+                            {{msg.content}}
+                            <span class="msg_time_send">{{msg.messageTime| date:'shortTime'}}</span>
+                        </div>
+                        <div class="img_cont_msg">
+                       <img src="{{currentUser.imgUrl}} " class="rounded-circle user_img_msg">
+                        </div>
+                    </div>
+                 </div>
+                </div>
+                </div>
+
+
+                <div class="card-footer">
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class=" attach_btn"><i class="fas fa-paperclip"></i></span>
+                        </div>
+                        <textarea name="" [(ngModel)]="message" class="form-control type_msg .senderfield" placeholder="Type your message..."></textarea>
+                        <div class=" btn btn-primary m-2">
+                            <span class=" " (click)="sendMessage()"><i class="fas fa-location-arrow iconep"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+</div>

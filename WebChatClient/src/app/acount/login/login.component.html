@@ -1,0 +1,25 @@
+<div class="row justify-content-center" >
+    <!--<div class="alert alert-danger col-md-6 " *ngIf="error" style=" border-radius:10px">
+        email or password is not valid   
+        <div class="bt" (click)="onclose()">X</div>
+   </div>-->
+    <div class="con">
+        <form  #authform="ngForm"  (ngSubmit)="onSubmitForm(authform)">
+            <div class="col-xs-12 mb-5" >
+            <div class="form-floating mb-4 mt-2">
+                <input type="text" class="form-control" id="floatingInput" placeholder="user name" #userName="ngModel" name="userName" ngModel required >
+                <label for="floatingInput">user Name</label>
+                <span class="text-danger" *ngIf="userName.invalid&&userName.touched&&userName.errors['required']">user Name is required</span>
+              </div>
+              <div class="form-floating mb-4 mt-2">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" #password="ngModel" name="password" ngModel required minlength="6">
+                <label for="floatingPassword">Password</label>
+                <span class="text-danger" *ngIf="password.invalid&&password.touched&&password.errors['required']">password is required</span>
+              </div>
+               
+             </div>
+            <div class="text-start mt-5">
+                <button class="btn btn-outline-Secondary " style="cursor: pointer;" type="submit" [disabled]="!authform.valid" >Log In</button> 
+            </div>
+        </form>
+    </div>

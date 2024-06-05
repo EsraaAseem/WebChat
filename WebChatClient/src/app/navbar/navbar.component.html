@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand navbar-light bg-light m-2">
+   <a class="navbar-brand " href="#" *ngIf="!currentUser">Navbar</a>
+   <div class=" profileLink" *ngIf="currentUser">
+      <a class="nav-link active" aria-current="page" routerLink="/chat/client">
+      <img src="{{currentUser.imgUrl}}" alt="image not found" class="rounded-circle user_img">
+      <p>{{currentUser.userName}}</p>
+   </a>
+   </div>
+   <div  id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+         <a class="nav-link active " aria-current="page" routerLink="/chat/client" *ngIf="currentUser">Chat</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link active " aria-current="page" routerLink="/chat/friendRequest" *ngIf="currentUser">Friend Requests</a>
+      </li>
+      <li class="nav-item active">
+         <a class="nav-link active" aria-current="page" routerLink="/chat/register" *ngIf="!currentUser">Register</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/chat/login" *ngIf="!currentUser">Login</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/chat/addFrind" *ngIf="currentUser">Add Friend</a>
+      </li>
+      <li class="nav-item">
+           <a  class="nav-link active"  aria-current="page" routerLink="/chat/getFriends" *ngIf="currentUser">Friends</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link active" aria-current="page" routerLink="/chat/addGroup" *ngIf="currentUser">Add Group</a>
+      </li>
+       <li class="nav-item">
+         <button aria-current="page" class="btn " (click)="onLogout()" *ngIf="currentUser">Logout</button>
+      </li>
+    </ul>
+  </div>
+</nav>

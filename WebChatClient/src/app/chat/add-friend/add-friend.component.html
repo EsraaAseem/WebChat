@@ -1,0 +1,22 @@
+<!--<form [formGroup]="friendForm">
+    <label for="userName">User Name:</label>
+    <input type="text" id="userName" formControlName="userName" />
+    <button type="button" (click)="addFriend()">Add Friend</button>
+  </form>-->
+
+  <div class="row justify-content-center" >
+    <div class="con">
+        <form [formGroup]="friendForm">
+            <div class="col-xs-12 mb-5" >
+            <div class="form-floating mb-4 mt-2">
+                <input type="text" class="form-control" id="floatingInput" placeholder=" Phone Number" formControlName="phoneNumber" #phoneNumber >
+                <label for="floatingInput">Phone Number</label>
+              </div>
+            <div class="text-start mt-5">
+                <button class="btn btn-primary "
+                 style="cursor: pointer;" type="submit" (click)="addFriend()">Add Frind</button> 
+            </div>
+            </div>
+        </form>
+    </div>
+  </div>
