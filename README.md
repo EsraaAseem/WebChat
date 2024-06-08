@@ -16,4 +16,9 @@ Application has the sign out functionality.
 * ####  Angular
 * ####  Bootstrap
   ## Images
+  <figure>
+    <img src="/images/digram.png"
+         alt="Albuquerque, New Mexico">
+    <figcaption>A single track trail outside of Albuquerque, New Mexico.</figcaption>
+</figure>
   ![Chat App](/Images/digram.png)
