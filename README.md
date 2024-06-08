@@ -7,11 +7,13 @@ User or group.
 * He or she can delete message  for himselft/herself or everyone.
 Application has the sign out functionality.
  ## Technologies
-* ###  ASP.NET Core Api
-* ###  Entity Framework Core &Linq
-* ###  SignalR
-* ###  Sql Server
-* ###  Mapster,Jwt
-* ###  Domain Driven Design,CQRs,specification patterns
-* ###  Angular
+* ####  ASP.NET Core Api
+* ####  Entity Framework Core &Linq
+* ####  SignalR
+* ####  Sql Server
+* ####  Mapster,Jwt
+* ####  Domain Driven Design,CQRs,specification patterns
+* ####  Angular
 * ####  Bootstrap
+  ## Images
+  
