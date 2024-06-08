@@ -6,10 +6,10 @@ This is online chat application with ASP.NET Core Api, SignalR , SqlServer,and A
 User or group.
 * He or she can delete message  for himselft/herself or everyone.
 Application has the sign out functionality.
-## Technologies
-### * ASP.NET Core Api
-### * Entity Framework Core &Linq
-### * SignalR
+* ## Technologies
+* ###  ASP.NET Core Api
+###  Entity Framework Core &Linq
+###  SignalR
 ### * Sql Server
 ### * Mapster,Jwt
 ### * Domain Driven Design,CQRs,specification patterns
