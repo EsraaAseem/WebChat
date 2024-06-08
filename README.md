@@ -18,13 +18,15 @@ Application has the sign out functionality.
     - `MediatR`
     - `Fluent Validation`
     - `MapSter`
-    - - **Design Patterns:**
-    - `CQRS`
-    - `Domain Driven Design`
-    - `specification`
+  
 - **Presentation:**
     - API Documentation: `OpenAPI (Swagger)`
     - Realtime Communication: `SignalR`
+ -  **Design Patterns:**
+    - `CQRS`
+    - `Domain Driven Design`
+    - `specification`
+    - Repository 
 - **Programming languages:** `C#`, `SQL`, `TypeScript`
 - **Tools & IDE:** `Visual Studio`, `VS Code`
 
