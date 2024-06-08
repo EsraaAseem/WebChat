@@ -6,18 +6,29 @@ This is online chat application with ASP.NET Core Api, SignalR , SqlServer,and A
 User or group.
 * He or she can delete message  for himselft/herself or everyone.
 Application has the sign out functionality.
- ## Technologies
-* ####  ASP.NET Core Api
-* ####  Entity Framework Core &Linq
-* ####  SignalR
-* ####  Sql Server
-* ####  Mapster,Jwt
-* ####  Domain Driven Design,CQRs,specification patterns
-* ####  Angular
-* ####  Bootstrap
-  ## Images
+## Technology stack
 
-  ![Chat App](/Images/digram.png)   ![Chat App](/Images/walaachat.png)
-   ![Chat App](/Images/java1.png)
-  ![Chat App](/Images/java2.png)
+- **SDK:** `.NET 7`
+- **Frameworks:** `ASP .NET Core`, `Angular`
+- **Persistence:**
+    - Database: `MS SQL Server`
+    - ORM: `Entity Framework Core`
+- **Authorization:** `JWT Bearer`
+- **Application Logic:**
+    - `MediatR`
+    - `Fluent Validation`
+    - `MapSter`
+    - - **Design Patterns:**
+    - `CQRS`
+    - `Domain Driven Design`
+    - `specification`
+- **Presentation:**
+    - API Documentation: `OpenAPI (Swagger)`
+    - Realtime Communication: `SignalR`
+- **Programming languages:** `C#`, `SQL`, `TypeScript`
+- **Tools & IDE:** `Visual Studio`, `VS Code`
+
+  ![Chat App](/Images/digramgit.png)   ![Chat App](/Images/walaachatgit.png)
+   ![Chat App](/Images/java1git.png)
+  ![Chat App](/Images/java2git.png)
 
