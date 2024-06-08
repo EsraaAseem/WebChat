@@ -29,7 +29,15 @@ Application has the sign out functionality.
     - Repository 
 - **Programming languages:** `C#`, `SQL`, `TypeScript`
 - **Tools & IDE:** `Visual Studio`, `VS Code`
-
+> [!TIP]
+This site is not finished yet. There are some future additions to improve Like This
+  * Improve Front end
+  * Confirm Phone Number
+  * Allow Block User
+  * Allow Send File Or IMage
+  * Know If Message Read Or Not
+  * Add Unit Test
+## Images
   ![Chat App](/Images/digramgit.png)   ![Chat App](/Images/walaachatgit.png)
    ![Chat App](/Images/java1git.png)
   ![Chat App](/Images/java2git.png)
