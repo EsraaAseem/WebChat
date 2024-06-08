@@ -26,7 +26,7 @@ Application has the sign out functionality.
     - `CQRS`
     - `Domain Driven Design`
     - `specification`
-    - Repository 
+    - `Repository `
 - **Programming languages:** `C#`, `SQL`, `TypeScript`
 - **Tools & IDE:** `Visual Studio`, `VS Code`
 > [!TIP]
